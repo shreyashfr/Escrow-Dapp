@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escrow Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Escrow Service</h1>
+        <p><input type="text" id="buyer" placeholder="Buyer Address" /></p>
+        <p><input type="text" id="seller" placeholder="Seller Address" /></p>
+        <p><input type="text" id="escrowAgent" placeholder="Escrow Agent Address" /></p>
+        <button onclick="connectWallet()">Connect Wallet</button>
+        <button onclick="disconnectWallet()">Disconnect Wallet</button>
+        <p id="connectedAddress"></p>
+        <button onclick="createContract()">Create Contract</button>
+
+        <div class="interaction-buttons">
+            <button onclick="deposit()">Deposit Funds</button>
+            <button onclick="confirmDelivery()">Confirm Delivery</button>
+            <button onclick="refundBuyer()">Refund Buyer</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
